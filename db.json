@@ -70,5 +70,27 @@
         }
       ]
     }
+  ],
+  "api": [
+    {
+      "activity": "Vá a um brechó local",
+      "type": "Recreativo",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "8503795",
+      "accessibility": 0.2,
+      "id": 1
+    },
+    {
+      "activity": "Faça uma viagem de pesca com alguns amigos",
+      "type": "Social",
+      "participants": 3,
+      "price": 0.4,
+      "link": "",
+      "key": "3149232",
+      "accessibility": 0.4,
+      "id": 2
+    }
   ]
 }

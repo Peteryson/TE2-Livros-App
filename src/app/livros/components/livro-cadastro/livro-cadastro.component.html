@@ -1,1 +1,69 @@
-<h1>Cadastro de Livros</h1>
+
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Cadastro de Livros</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup] ="livroForm" (ngSubmit)="submitForm()">
+        
+        <ion-item>
+            <ion-input formControlName="titulo" type="text" placeholder="Digite.." label="Titulo" labelPlacement="floating"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-input formControlName="subtitulo" type="text" placeholder="Digite.." label="Subtitulo" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-input formControlName="paginas"  type="number" placeholder="Digite.." label="Páginas" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-input formControlName="isbn"  type="text" placeholder="Digite.." label="ISBN" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-select labelPlacement="floating" label="Autores" multiple="true" placeholder="Selecione Autores">
+                <ion-select-option *ngFor="let autor of autores" value="{{autor.id}}">{{autor.nome}}</ion-select-option>
+            </ion-select> 
+        </ion-item>
+    
+        <ion-item>
+            <ion-input formControlName="editora"  type="text" placeholder="Digite.." label="Editora" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-input formControlName="ano" type="date" placeholder="Digite.." label="Ano" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-input formControlName="logo" type="url" placeholder="Digite.." label="Logo" labelPlacement="floating"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-input formControlName="preco" type="number" placeholder="Digite.." label="Preço" labelPlacement="floating"></ion-input>
+        </ion-item>
+
+        <ion-button block color="primary" type="submit">
+            ué
+        </ion-button>
+    </form>
+
+
+
+    
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar  color="success">
+        <ion-button expand="block" fill="clear" shape="round">
+           Salvar
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>
